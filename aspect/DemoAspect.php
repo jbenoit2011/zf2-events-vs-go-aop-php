@@ -31,6 +31,6 @@ class DemoAspect implements Aspect
      */
     public function afterMethodExecution(MethodInvocation $invocation)
     {
-        echo 'foo';
+        file_put_contents('/tmp/foo', 'foo');
     }
 }
