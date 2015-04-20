@@ -19,6 +19,7 @@
 // Composer autoloading
 if (file_exists('vendor/autoload.php')) {
     $loader = include 'vendor/autoload.php';
+    $loader->add('Aspect', 'aspect');
 }
 
 if (class_exists('Zend\Loader\AutoloaderFactory')) {
