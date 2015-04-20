@@ -14,8 +14,13 @@ use Zend\View\Model\ViewModel;
 
 class IndexController extends AbstractActionController
 {
+    /**
+     * 
+     * @return ViewModel
+     */
     public function indexAction()
     {
+        $this->getEventManager()->trigger('foobar');
         return new ViewModel();
     }
 }

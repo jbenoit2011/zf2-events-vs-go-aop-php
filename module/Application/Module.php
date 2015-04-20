@@ -19,6 +19,12 @@ class Module
         $eventManager        = $e->getApplication()->getEventManager();
         $moduleRouteListener = new ModuleRouteListener();
         $moduleRouteListener->attach($eventManager);
+        $eventManager->getSharedManager()->attach(
+                'Application\Controller\IndexController',
+                'foobar',
+                function($e) {
+            file_put_contents('/tmp/foo', 'foo');
+        });
     }
 
     public function getConfig()
