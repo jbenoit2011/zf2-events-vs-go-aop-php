@@ -9,7 +9,7 @@ include __DIR__ . '/init_autoloader.php';
 
 // Initialize demo aspect container
 DemoAspectKernel::getInstance()->init(array(
-    'debug'         => true,
+    'debug'         => false,
     'appDir'        => __DIR__,
     'cacheDir'      => __DIR__ . '/data/cache/aspect',
     // Include paths for aspect weaving
